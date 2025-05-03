@@ -1,0 +1,12 @@
+CREATE TABLE dept(
+    id INT PRIMARY KEY,
+    name VARCHAR(20) NOTNULL
+)
+CREATE TABLE teacher(
+    id INT PRIMARY KEY,
+    name VARCHAR(20) NOTNULL
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES dept(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+)
