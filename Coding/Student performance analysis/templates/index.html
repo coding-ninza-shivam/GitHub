@@ -28,6 +28,7 @@
 
     <main class="main-content">
 
+        <!-- Left text -->
         <section class="text-section">
             <h1>Track <span class="highlight">Analyze</span> Improve</h1>
             <div class="divider"></div>
@@ -42,12 +43,22 @@
             <button class="learn-more">Learn More</button>
         </section>
 
+        <!-- Right image -->
         <section class="image-section">
             <img src="{{ url_for('static', filename='Landing_page.png') }}" alt="Landing Page Illustration">
             <h2 class="bottom-logo">Students <span>Performance</span> Analysis</h2>
         </section>
-    </main>
 
+        <!-- CSV Upload Form -->
+        <section class="upload-section" style="text-align: center; margin-top: 50px;">
+            <h2 style="color: white;">Upload Student Marks CSV</h2>
+            <form action="{{ url_for('analyze') }}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".csv" required style="margin: 15px;"><br>
+                <button type="submit" class="learn-more" style="cursor: pointer;">Analyze</button>
+            </form>
+        </section>
+
+    </main>
 
     <script>
         function toggleMenu() {
