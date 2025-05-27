@@ -8,7 +8,7 @@ app=Flask(__name__)
 
 @app.route("/")
 def welcome():
-    return"<html><h1><Welcome to this page></h1></html>"
+    return"<html><h1>Welcome to this page</h1></html>"
 
 @app.route("/index")
 def index():
