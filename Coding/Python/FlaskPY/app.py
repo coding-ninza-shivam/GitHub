@@ -8,5 +8,7 @@ app=Flask(__name__)
 
 @app.route("/")
 def welcome():
-    if __name__=="__main__":
-        app.run()
+    return"Welcome to flask"
+
+if __name__=="__main__":
+    app.run()

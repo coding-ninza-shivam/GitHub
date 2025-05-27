@@ -1,0 +1,46 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Play } from "lucide-react";
+
+export default function SpotifyClone() {
+  return (
+    <div className="min-h-screen bg-black text-white p-6 font-sans">
+      {/* Header */}
+      <header className="flex items-center justify-between mb-6">
+        <h1 className="text-3xl font-bold">Spotify</h1>
+        <Button className="bg-green-500 hover:bg-green-600 text-white">Sign Up</Button>
+      </header>
+
+      {/* Sidebar and Main Content */}
+      <div className="grid grid-cols-5 gap-6">
+        {/* Sidebar */}
+        <aside className="col-span-1 bg-gray-900 rounded-2xl p-4">
+          <nav className="space-y-4">
+            <a href="#" className="block hover:text-green-500">Home</a>
+            <a href="#" className="block hover:text-green-500">Search</a>
+            <a href="#" className="block hover:text-green-500">Your Library</a>
+          </nav>
+        </aside>
+
+        {/* Main Content */}
+        <main className="col-span-4">
+          <h2 className="text-2xl font-semibold mb-4">Your Playlists</h2>
+          <div className="grid grid-cols-3 gap-4">
+            {["Daily Mix 1", "Chill Vibes", "Top Hits", "Focus", "Workout", "Lo-fi Beats"].map((title, idx) => (
+              <Card key={idx} className="bg-gray-800 text-white rounded-2xl">
+                <CardContent className="p-4 flex flex-col items-start space-y-4">
+                  <div className="h-32 w-full bg-gray-700 rounded-xl"></div>
+                  <h3 className="text-lg font-bold">{title}</h3>
+                  <Button className="bg-green-500 hover:bg-green-600 w-full">
+                    <Play className="mr-2" size={16} /> Play
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+}
