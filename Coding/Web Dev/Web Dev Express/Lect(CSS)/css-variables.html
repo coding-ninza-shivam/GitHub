@@ -5,17 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Variables</title>
     <style>
-        .nav{
-
-        }
+      
+      :root{
+        --color:rgb(193, 254, 254);
+        --seccolor:azure;
+      }
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      .nav {
+        background-color: var(--color, blue);
+      }
+      ul li {
+        list-style: none;
+        margin: auto;
+        padding: 10px;
+      }
+      ul{
+        display: flex;
+      }
+      .container{
+        background-color: var(--seccolor);
+      }
     </style>
   </head>
   <body>
     <div>
       <ul class="nav">
-        <li >Hime</li>
-        <li >Lake</li>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Services</li>
       </ul>
+    </div>
+    <div class="container">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro suscipit
+      saepe quibusdam? Esse, dolore accusantium velit modi ad cupiditate quod
+      atque nostrum impedit saepe aliquid eligendi alias voluptas libero
+      veritatis quidem eum dolorem perspiciatis enim soluta voluptatem, nesciunt
+      quae blanditiis. Accusamus magnam eos cum adipisci odio provident
+      voluptates cupiditate tempora?
     </div>
   </body>
 </html>
