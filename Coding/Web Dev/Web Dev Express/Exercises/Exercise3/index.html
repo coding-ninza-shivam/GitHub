@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card</title>
     <style>
+      
       .box {
-        background-color: rgb(130, 220, 195);
+        background-color: rgb(130, 220, 195); 
+        border-radius: 50px;
         width: 1000px;
         height: 1100px;
       }
-      main img {
-        width: 900px;
-        margin: auto;
-        margin-top: 25px;
+      .image {
+        padding: 25px;
+      }
+      .image img{
+        border-radius: 25px;
       }
       .nav{
         background-color:rgb(163, 238, 216) ;
         margin: auto;
-        margin-top: 25px;
         padding: 10px;
         border: 1px solid black;
+        border-radius: 15px;
         list-style: none;
 
       }
-      body a{
-        background-color:rgb(163, 238, 216) ;
-        border: 1px solid black;
-        margin: auto;
+      
+      .button button{
+        padding: 10px 25px;
+        border-radius: 15px;
+        background-color: rgb(163, 238, 216) ;
+        align-items:center ;
       }
+      
+      
       ul{
         display: flex;
       }
@@ -44,7 +51,9 @@
   </head>
   <body>
     <main class="box">
-      <figure><img src="Img1card.jpg" alt="Nature Image" /></figure>
+      <div class="image">
+        <img width="950"  src="Img1card.jpg" alt="Nature Image" >
+      </div>
         <div>
           <ul>
             <li class="nav">Nature</li>
@@ -69,7 +78,11 @@
           nemo reprehenderit! Quos delectus repellendus non hic quaerat aliquam
           officiis facilis error, esse saepe eaque dolores, nihil reprehenderit.
         </p>
-        <a href="https://www.nature.com/">Read more</a>
+        <div class="button">
+          <button>
+            Submit
+          </button>
+        </div>
       </div>
     </main>
   </body>
