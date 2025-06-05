@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navabar using flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+      .navbar {
+        background-color: rgb(245, 139, 0);
+        padding: 12px 0;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .item{
+        padding: 6px;
+      }
+      .logo{
+        height: 14px;
+      }
+      
+
+     
+
+    </style>
+  </head>
+  <body>
+        <main>
+        <div class="navbar">
+            <img class="logo" src="logo.png" alt="logo">
+            <div class="item">Products</div>
+            <div class="item">Pricing</div>
+            <div class="item">Resourcest</div>
+            <div class="item">Our Company</div>
+        </div>
+    </main>
+  </body>
+</html>
