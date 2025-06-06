@@ -19,7 +19,7 @@ load_dotenv()  # This loads variables from .env into environment
 SECRET_KEY = os.getenv('SECRET_KEY')
 MAIL_USERNAME = os.getenv('MAIL_USERNAME')
 MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-
+# 
 # SQLAlchemy config
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
