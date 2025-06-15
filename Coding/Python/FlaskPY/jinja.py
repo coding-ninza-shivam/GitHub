@@ -32,7 +32,40 @@ def submit():
     if request.method=='POST':
         name=request.form['name']
         return f'Hello {name}!'
-    return render_template("form.html")
+    return render_template("form.html") 
+
+# Variable Rule
+@app.route("/sucess/<int:score>")
+def sucess(score):
+    result=""
+    if score>50:
+        result="PASS"
+    else:
+        result="FAIL"
+    # print("The marks you got is "+ str(score)) 
+    return render_template("result.html", results=result)
+
+@app.route("/sucessres/<int:score>")
+def sucessres(score):
+    result=""
+    if score>50:
+        result="PASS"
+    else:
+        result="FAIL"
+    exp={"score":score, "result":result}
+    return render_template("result1.html", results=exp)
+
+# if condition
+@app.route("/sucessif/<int:score>")
+def sucessif(score):
+    return render_template("result2.html", results=score)
+    
+# Jinja 2 template engine #
+'''
+{{}}     expression to print output in html
+{%...%}  for conditions and loops
+{#...#}  for comments 
+'''
 
 
 
